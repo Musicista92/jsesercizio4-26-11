@@ -23,34 +23,35 @@ function boundary(numIntero) {
         return false
     }
 }
-console.log ( boundary( 400))
+console.log(boundary(400))
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
- let parolaChiave = "EPICODE"
-function reverseString (string) {
-    const arrayCaratteri = string.split ("")
-    const arrayInvertito = arrayCaratteri.reverse ( )
-    const stringaInverita = arrayInvertito.join (" ")
+let parolaChiave = "EPICODE"
+
+function reverseString(string) {
+    const arrayCaratteri = string.split("")
+    const arrayInvertito = arrayCaratteri.reverse()
+    const stringaInverita = arrayInvertito.join(" ")
     return stringaInverita
 }
-console.log (reverseString( parolaChiave))
+console.log(reverseString(parolaChiave))
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
 let testo = "italia francia"
- let risultato = upperFirst (testo)
+let risultato = upperFirst(testo)
 
 function upperFirst(stringa) {
-// dividi la stringa in parole 
+    // dividi la stringa in parole 
     const words = stringa.split(" ")
-    const upperwords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1) )
-    return upperwords.join ( " ")
+    const upperwords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    return upperwords.join(" ")
 }
-console.log ( risultato)
+console.log(risultato)
 
 
 /* ESERCIZIO 5
@@ -75,14 +76,29 @@ console.log(giveMeRandom(5))
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function area(l1, l2) {
+    return l1 * l2
+}
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const numImput = prompt("inserisci numero")
+function crazyDiff(num) {
+    const differenza = Math.abs(num - 19)
+    if (differenza > 19) {
+        return differenza * 3
+
+    } else {
+        return differenza
+    }
+}
+const parsedInput = parseFloat(numImput)
+const ris = crazyDiff(parsedInput)
+    console.log("Il risultato è:" + ris)
+
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
