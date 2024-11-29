@@ -85,7 +85,7 @@ function area(l1, l2) {
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-const numImput = prompt("inserisci numero")
+const numInput = prompt("inserisci numero")
 function crazyDiff(num) {
     const differenza = Math.abs(num - 19)
     if (differenza > 19) {
@@ -95,7 +95,7 @@ function crazyDiff(num) {
         return differenza
     }
 }
-const parsedInput = parseFloat(numImput)
+const parsedInput = parseFloat(numInput)
 const ris = crazyDiff(parsedInput)
     console.log("Il risultato è:" + ris)
 
